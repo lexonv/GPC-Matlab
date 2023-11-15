@@ -19,7 +19,7 @@ C = toeplitz(Av,same_zera);
 
 H = hankel(Hkolumna);
 
-if Ckolumny > 2
+if Ckolumny >= 2
     H = H(:,1:Ckolumny-1);
 else
     H = H(:,1:Ckolumny);

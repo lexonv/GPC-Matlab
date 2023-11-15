@@ -1,4 +1,4 @@
-function [C, dd,du,ddu,dy] = mpc_ograniczenia(dumax,dumin,umax,umin,ymax,ymin,nu,H,P,Q)
+function [C, dd,du,ddu,dy] = mpc_ograniczenia(dumax,dumin,umax,umin,ymax,ymin,nu,H,P,Q,ilosc_du,ilosc_y)
 
 ny = size(H,1);
 A = ones(ny);
@@ -24,7 +24,7 @@ C = [Cdu;Cu*E;Cy*H];
 
 %Macierz poprzednich inkrementów du
 
-ddu = -[zeros(2*nu,1);zeros(2*nu,1);Cy*P];
+ddu = -[zeros(2*nu,ilosc_du);zeros(2*nu,ilosc_du);Cy*P];
 
 %Macierz poprzednich u
 
@@ -32,7 +32,7 @@ du = -[zeros(2*nu,1);Cu*L;zeros(2*ny,1)];
 
 %Macierz poprzednich y
 
-dy = -[zeros(2*nu,2);zeros(2*nu,2);Cy*Q];
+dy = -[zeros(2*nu,ilosc_y);zeros(2*nu,ilosc_y);Cy*Q];
 
 %Macierz ograniczeń dd
 
