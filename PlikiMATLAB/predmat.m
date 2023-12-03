@@ -13,17 +13,12 @@ Hkolumna = zeros(n,1);
 
 C = toeplitz(Av,same_zera);
 
-    for i = 2:Ckolumny
-    Hkolumna(i-1) = A(i);
-    end
+for i = 2:Ckolumny
+Hkolumna(i-1) = A(i);
+end
 
 H = hankel(Hkolumna);
 
-if Ckolumny >= 2
-    H = H(:,1:Ckolumny-1);
-else
-    H = H(:,1:Ckolumny);
-end
-
+H = H(:,1:Ckolumny-1);
 
 
