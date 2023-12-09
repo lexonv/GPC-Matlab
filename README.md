@@ -5,3 +5,5 @@ Promotor: dr. inż. Jarosław Tarnawski
 
 Pliki zawierają algorytm regulatora adaptacyjno-predykcyjnego (aMPC). Jako algorytm predykcyjny wykorzystano regulator GPC. 
 Do realizacji adaptacji wykorzystano rekurencyjną metodą najmniejszych kwadratów z współczynnikiem zapominania.
+
+Dodatkowo w plikach zawarto kod dotyczący regulatora DMC w wersji z ograniczeniami oraz bez ograniczeń.
