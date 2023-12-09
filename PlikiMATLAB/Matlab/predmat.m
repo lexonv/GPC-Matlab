@@ -1,4 +1,4 @@
-function [C,H] = predmat(A,n)
+  function [C,H] = predmat(A,n)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [Cwiersze,Ckolumny] = size(A);
 same_zera = zeros(1,n);
